@@ -21,14 +21,19 @@ public class Borrower {
         borrowList.remove(book);
     }
 
-    public void displayBorrowedBooks(Book book){
-        System.out.println(name + "borrow list");
-        System.out.println("-------------------------------------");
-        for (Book books : borrowList) {
-            System.out.println("Book Title : " +books.getTitle());
-            System.out.println("Book ISBN : " +books.getISBN());
-            System.out.println("Book Author : " +books.getAuthor().getName());
-            System.out.println("======================================");
+    public void displayBorrowedBooks(){
+        System.out.println(name + "'s Borrowed Books :");
+       
+        if (borrowList.isEmpty()) {
+            System.out.println("No books borrowed.");
+        } else {
+            for (Book book : borrowList) {
+                System.out.println("Title : " +book.getTitle());
+                System.out.println("ISBN : " +book.getISBN());
+                System.out.println("Author : " +book.getAuthor().getName());
+                System.out.println("Biography :" +book.getAuthor().getBio());
+                System.out.println("-------------------------------------");
+            }
         }
     }
 }

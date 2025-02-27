@@ -1,5 +1,5 @@
 public class Player {
-    public char player;
+    private char player;
 
     public Player(char player){
         this.player = player;

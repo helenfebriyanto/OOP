@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class TicTacToe {
-    public Board board;
-    public Player player1;
-    public Player player2;
+    private Board board;
+    private Player player1;
+    private Player player2;
     public Scanner scanner;
-    public Player currentPlayer;
+    private Player currentPlayer;
 
     public TicTacToe(){
         this.board = new Board();

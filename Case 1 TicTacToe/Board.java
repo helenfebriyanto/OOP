@@ -1,5 +1,5 @@
 public class Board {
-    public char board[][];
+    private char board[][];
 
     public Board(){
         board = new char[3][3];

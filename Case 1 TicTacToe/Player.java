@@ -1,7 +1,7 @@
 public class Player {
     public char player;
 
-    public void setPlayer(char player) {
+    public Player(char player){
         this.player = player;
     }
 

@@ -1,7 +1,7 @@
 public class Board {
     public char board[][];
 
-    public board(){
+    public Board(){
         board = new char[3][3];
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
@@ -13,7 +13,7 @@ public class Board {
     public void printBoard(){
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
-                System.out.println(board[i][j] + " ");
+                System.out.print(board[i][j] + " ");
             }
             System.out.println();
         }
@@ -28,12 +28,13 @@ public class Board {
         return true;
     }
 
-    public void placeMove(int row, int col, char player){
+    public boolean placeMove(int row, int col, char player){
         if(row>=3 || col >= 3 || row<0 || col<0 || board[row][col]!='-'){
             System.out.println("Invalid move, please try again");
-            return;
+            return false;
         }
         board[row][col]=player;
+        return true;
     }
 
     public boolean checkWin(char player){
